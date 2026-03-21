@@ -106,6 +106,7 @@ status| dataset |  metadata |  contents |  with audio
 &#x2620; | <a title="ISMIR2004Genre" href="http://ismir2004.ismir.net/genre_contest/index.html" target="_blank" rel="noopener">ISMIR2004Genre</a> | 6 genres | 729 excerpts (30s) | yes
 &#x2705; | <a title="ISMIR2004Tempo" href="http://mtg.upf.edu/ismir2004/contest/tempoContest/node6.html" target="_blank" rel="noopener">ISMIR2004Tempo</a> | tempo | 465 excerpts (20s) | yes
 &#x2705; | <a title="JAAH" href="https://github.com/MTG/JAAH" target="_blank" rel="noopener">Jazz Audio-Aligned Harmony Dataset</a> | structure, key, chords, beats | 113 songs | no
+&#x2705; | <a title="jaCappella" href="https://tomohikonakamura.github.io/jaCappella_corpus/" target="_blank" rel="noopener">jaCappella corpus, Japanese a cappella vocal ensemble corpus</a> | musical sheet (MusicXML), 10 genres, singer ID | 50 songs (6 voices), audio recordings of each voice part and mixture | yes
 &#x2620; | <a title="Jamendo-VAD" href="https://jobim.ofai.at/download/jamendo.tgz" target="_blank" rel="noopener">Jamendo-VAD</a> | voice activity | 61+16+16 songs | yes
 &#x2705; | <a title="JGDB" href="https://ccrma.stanford.edu/~jga/ismir2010/ismir2010.html" target="_blank" rel="noopener">JGDB</a> | multitrack, MIDI | random generated excerpts | yes
 &#x2705; | <a title="JKU-ScoFo" href="http://www.cp.jku.at/resources/2019_RLScoFo_TISMIR" target="_blank" rel="noopener">JKU-ScoFo</a> | audio, MIDI | 16 recordings | yes
@@ -135,7 +136,7 @@ status| dataset |  metadata |  contents |  with audio
 &#x2705; | <a title="Medley-solos-DB" href="https://zenodo.org/record/2582103" target="_blank" rel="noopener">Medley-solos-DB: a cross-collection dataset for musical instrument recognition</a> | 8 instruments | 21572 excerpts | yes
 &#x2705; | <a title="MedleyDB" href="http://medleydb.weebly.com" target="_blank" rel="noopener">MedleyDB</a> | multitrack, genre, melody f0, instrument activation | 122 songs | yes
 &#x2705; | <a title="MelonPlaylistDataset" href="https://mtg.github.io/melon-playlist-dataset/" target="_blank" rel="noopener">Melon Playlist Dataset</a> | 148826 playlists, 30 genres, 219 subgenres, 30652 playlist tags | mel-spectrograms for 649091 songs (20-50s segments) | no
-&#x2705; | <a title="MeloSol" href="https://davidjohnbaker1.github.io/melosol/" target="_blank" rel="noopener">MeloSol</a> | melody, monophonic, symbolic, kern, key | 783 melodies | no
+&#x2620; | <a title="MeloSol" href="https://davidjohnbaker1.github.io/melosol/" target="_blank" rel="noopener">MeloSol</a> | melody, monophonic, symbolic, kern, key | 783 melodies | no
 &#x2705; | <a title="MER500" href="https://www.kaggle.com/makvel/mer500" target="_blank" rel="noopener">MER500</a> | emotion | 500 clips | yes
 &#x2705; | <a title="MIR-1K" href="https://sites.google.com/site/unvoicedsoundseparation/mir-1k" target="_blank" rel="noopener">MIR-1K</a> | vocal tracks, background tracks | 1000 excerpts | yes
 &#x2705; | <a title="mirex05Train" href="http://labrosa.ee.columbia.edu/projects/melody/" target="_blank" rel="noopener">mirex05Train</a> | predominant pitch | 13 excerpts | yes
@@ -187,7 +188,7 @@ status| dataset |  metadata |  contents |  with audio
 &#x2705; | <a title="QMUL:Zweieck" href="http://isophonics.net/content/reference-annotations-zweieck" target="_blank" rel="noopener">QMUL:Zweieck</a> | structure, key, chords, beats | 18 songs | no
 &#x2705; | <a title="QUASI" href="http://www.tsi.telecom-paristech.fr/aao/en/2012/03/12/quasi/" target="_blank" rel="noopener">QUASI</a> | multitrack | 11 songs | yes
 &#x2705; | <a title="RobbieWilliamsAnnotations" href="http://ispg.deib.polimi.it/mir-software.html" target="_blank" rel="noopener">RobbieWilliamsAnnotations</a> | chords, keys, beats | 65 songs | no
-&#x2705; | <a title="RockCorpus" href="http://rockcorpus.midside.com" target="_blank" rel="noopener">RockCorpus</a> | chords, melody, bars | 200 songs | no
+&#x2620; | <a title="RockCorpus" href="http://rockcorpus.midside.com" target="_blank" rel="noopener">RockCorpus</a> | chords, melody, bars | 200 songs | no
 &#x2705; | <a title="RWC" href="http://staff.aist.go.jp/m.goto/RWC-MDB/" target="_blank" rel="noopener">RWC</a> | lyrics, 10 genre, 50 instruments, [chords](https://github.com/tmc323/Chord-Annotations), [structure](http://musicdata.gforge.inria.fr/structureAnnotation.html), [aligned MIDI](https://staff.aist.go.jp/m.goto/RWC-MDB/AIST-Annotation/SyncRWC/) | 115 songs/50 classical/100 songs | yes
 &#x2705; | <a title="SALAMI" href="http://ddmal.music.mcgill.ca/research/salami/annotations" target="_blank" rel="noopener">SALAMI</a> | structure | 1447 songs | no
 &#x2705; | <a title="SAMBASET" href="http://www02.smt.ufrj.br/~starel/sambaset/" target="_blank" rel="noopener">SAMBASET</a> | recording date, escolas, beats | 392 | no
@@ -221,7 +222,7 @@ status| dataset |  metadata |  contents |  with audio
 &#x2705; | <a title="TinySOL" href="https://zenodo.org/record/3632192" target="_blank" rel="noopener">TinySOL, an audio dataset of isolated musical notes</a> | instrument, pitch, dynamics, string number (if applicable) | 2913 isolated notes | yes
 &#x2705; | <a title="TONAS" href="http://mtg.upf.edu/download/datasets/tonas" target="_blank" rel="noopener">TONAS</a> | pitch | 72 single-voiced excerpts | yes
 &#x2705; | <a title="TPD" href="http://mir.ilsp.gr/track_popularity.html" target="_blank" rel="noopener">Track Popularity</a> | popularity rating | 23385 songs | no
-&#x2705; | <a title="Tunebot" href="http://music.cs.northwestern.edu/data/tunebot" target="_blank" rel="noopener">Tunebot</a> | title, artist | 10000 queries/? songs | yes/no
+&#x2620; | <a title="Tunebot" href="http://music.cs.northwestern.edu/data/tunebot" target="_blank" rel="noopener">Tunebot</a> | title, artist | 10000 queries/? songs | yes/no
 &#x2705; | <a title="UIOWA:MIS" href="http://theremin.music.uiowa.edu/MIS.html" target="_blank" rel="noopener">UIOWA:MIS</a> | single instrument notes | many | yes
 &#x2620; | <a title="UMA-Piano" href="http://extras.springer.com/2013/978-1-4614-7475-3" target="_blank" rel="noopener">UMA-Piano</a> | piano chords | 275040 recordings | yes
 &#x2705; | <a title="UnmixDB" href="https://zenodo.org/record/1422385#.W7R5zxMzYWo" target="_blank" rel="noopener">UnmixDB</a> | DJ mix parameters | 37 playlists | yes
