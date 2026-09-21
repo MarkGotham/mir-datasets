@@ -1,5 +1,37 @@
 """
 Enrich the VoR `mir-datasets.yaml` file with API-retrieved information.
+
+1.
+Open the `mir-datasets.yaml` file
+which is structured as a mapping of
+dataset name -> {url, metadata, contents, audio, ...}.
+
+2.
+For each entry with an `url` value,
+if the URL is GitHub, Zenodo, or Hugging Face, then
+go to the relevant API and:
+- get a date (all three), version (Zenodo), and license (all three)
+- add those new datapoints into the `url` value.
+
+3.
+Overwrite the original file with this enrichment
+(by default, it always _adds_ information).
+
+This makes one syntactical change: `url` goes
+from a plain string into a mapping: {value, date, license, source[, version]}
+in a manner similar to what's already there for metadata.
+
+See notes on individual functions for details including what the `date` means,
+especially wrt GitHub where it is from the `pushed_at` endpoint (any branch).
+This seems lke the simplest and cleanest solution for now,
+but is debatable.
+
+TODO
+1. More APIs
+2. Decide if individuals can manually enter this information
+(maybe not for the APIs represented, to avoid the mixture).
+3. Git action to run this every so often (every PR?)
+4. Consider moving more URLs to supported APIs (where equivalent).
 """
 
 import argparse
@@ -328,7 +360,7 @@ def process_data(filepath: str = DEFAULT_FILEPATH, force: bool = False):
         if not url:
             continue
 
-        if not force and enriched.get("date") and enriched.get("license"):
+        if not force and enriched.get("date") and "license" in enriched:
             log.info("[%d/%d] %s (already processed, skipping)", i, total, name)
             continue
 
@@ -346,7 +378,14 @@ def process_data(filepath: str = DEFAULT_FILEPATH, force: bool = False):
                 else:
                     log.warning("  ... could not retrieve pushed_at date")
 
-                if license_id:
+                if license_id == "NOASSERTION":
+                    # GH found a license file but couldn't map it to SPDX id.
+                    # License is definitely not specified
+                    # Record that explicitly as null rather than the
+                    # GitHub-specific "NOASSERTION" string.
+                    enriched["license"] = None
+                    log.info("  ... license = null (GitHub: NOASSERTION)")
+                elif license_id:
                     enriched["license"] = license_id
                     log.info("  ... license = %s", license_id)
                 else:
